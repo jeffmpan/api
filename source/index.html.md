@@ -16,17 +16,19 @@ includes:
 search: true
 ---
 
-# Introduction
+# The SWITCH.CM API
 
-SWITCH.CM builds distribution platforms for airlines & hotels.  Building connectivity provides the following benefits:
+SWITCH.CM builds distribution platforms for airlines & hotels.  Our API will allow you to seamlessly synchronize the following data with thousands of booking websites:
 
-- ability to show live availability on your website
-- ability to facilitate active credit card payment (instead of forcing the transactions offline and losing customers in the sales funnel).
-- With just 43 lines of code, we can integrate a complex distribution network into a static website.
+- pricing & availability data
+- guest reservation data
 
+# Test Environment
 
+To start, we’ll set up the following development environments:
 
-# Authentication edited by yusa
+- a test xxx.switch.cm account (to simulate a real property)
+- a test booking.com account (to simulate your inventory on an OTA)
 
 > To authorize, use this code:
 
