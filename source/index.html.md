@@ -68,9 +68,11 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# API's
 
-## Get All Kittens
+## Room List Request (Send)
+
+## New Event Webhook (Receive)
 
 ```ruby
 require 'kittn'
@@ -120,6 +122,8 @@ let kittens = api.kittens.get();
 ```
 
 This endpoint retrieves all kittens.
+
+## New Event Webhook (Send)
 
 ### HTTP Request
 
@@ -190,3 +194,6 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
 
+## Full Reservation Query (Send)
+
+## Full Reservation Query (Receive)
