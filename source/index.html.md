@@ -26,7 +26,7 @@ SWITCH.CM builds distribution platforms for airlines & hotels.  Building connect
 
 
 
-# Authentication
+# Authentication edited by yusa
 
 > To authorize, use this code:
 
