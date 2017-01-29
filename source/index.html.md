@@ -16,7 +16,7 @@ includes:
 search: true
 ---
 
-# The SWITCH.CM API
+# Introduction
 
 SWITCH.CM builds distribution platforms for airlines & hotels.  Our API will allow you to seamlessly synchronize the following data with thousands of booking websites:
 
