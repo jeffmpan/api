@@ -19,11 +19,13 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+SWITCH.CM builds distribution platforms for airlines & hotels.  Building connectivity provides the following benefits:
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+- ability to show live availability on your website
+- ability to facilitate active credit card payment (instead of forcing the transactions offline and losing customers in the sales funnel).
+- With just 43 lines of code, we can integrate a complex distribution network into a static website.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+
 
 # Authentication
 
