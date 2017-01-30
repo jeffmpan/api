@@ -2,10 +2,7 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+  - curl
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -32,28 +29,10 @@ To start, we’ll set up the following development environments:
 
 > To authorize, use this code:
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
+```curl
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
@@ -74,54 +53,102 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## New Event Webhook (Receive)
 
-```ruby
-require 'kittn'
+The Booking Notification API allows partners to receive new, modified or cancelled reservations in near real time, as customers make these bookings.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+As this is a notification-based API, where Switch initiates the notifications, partners interested in implementing this API need to contact Switch to get started. It is possible to gain access to a test system that will generate booking notifications to the address of your choice. In order to get started with this, please contact info@switch.cm .
 
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
+> Response:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+{
+  "switchcm_id": "16",
+  "total_bookings": 2,
+  "bookings": [
+    {
+      "ota_id": 5,
+      "booking_id": "1455994472",
+      "booking_date": "2016-12-02",
+      "organiser_name": "Julio Edwards",
+      "rooms": [
+        {
+          "ota_room_name": "Single Bed in Mixed Dormitory Room",
+          "check_in": "2016-12-03",
+          "check_out": "2016-12-05",
+          "pms_room_type": "189",
+          "room_rate_name": "Standard Rate",
+          "room_rate_id": "3977877",
+          "status": "waiting for guest",
+          "total_price": "90.00",
+          "taxes": 0,
+          "comission": "13.50",
+          "room_type": "189",
+          "room_rate": "3977877",
+          "switch_id": "1821",
+          "guests": [
+            {
+              "name": "Julio Edwards",
+              "email": "tteste.848138@guest.booking.com"
+            }
+          ],
+          "nights": [
+            {
+              "date": "2016-12-03",
+              "price": "45.00"
+            },
+            {
+              "date": "2016-12-04",
+              "price": "45.00"
+            }
+          ]
+        }
+      ],
+      "cc": [],
+      "note": "I am travelling for business and I may be using a business credit card.You have a booker that prefers communication by emailhi"
+    },
+    {
+      "ota_id": 5,
+      "booking_id": "1765547633",
+      "booking_date": "2016-12-02",
+      "organiser_name": "John Doe",
+      "rooms": [
+        {
+          "ota_room_name": "",
+          "check_in": "2016-12-03",
+          "check_out": "2016-12-05",
+          "pms_room_type": "17",
+          "room_rate_name": "",
+          "room_rate_id": null,
+          "status": "waiting for guest",
+          "total_price": "90.00",
+          "taxes": 0,
+          "comission": "13.50",
+          "room_type": "17",
+          "room_rate": null,
+          "switch_id": "1820",
+          "guests": [
+            {
+              "name": "John Doe",
+              "email": "tteste.950791@guest.booking.com"
+            }
+          ],
+          "nights": [
+            {
+              "date": "2016-12-03",
+              "price": "45.00"
+            },
+            {
+              "date": "2016-12-04",
+              "price": "45.00"
+            }
+          ]
+        }
+      ],
+      "cc": [],
+      "note": "I am travelling for business and I may be using a business credit card.You have a booker that prefers communication by emailhi"
+    }
+  ]
+}
 ```
-
-This endpoint retrieves all kittens.
 
 ## New Event Webhook (Send)
 
