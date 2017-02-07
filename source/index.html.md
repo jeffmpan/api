@@ -22,7 +22,7 @@ SWITCH.CM builds distribution platforms for airlines & hotels.  Our API will all
 
 # Test Environment
 
-To start, we’ll set up the following development environments:
+To start, you'll have the following development environments:
 
 - a test xxx.switch.cm account (to simulate a real property)
 - a test booking.com account (to simulate your inventory on an OTA)
@@ -43,12 +43,14 @@ curl "api_endpoint_here"
 
 ### HTTP request ###
 
+```shell
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
 		<h6>/api/room/create</h6>
 	</div>
 </div>
+```
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
