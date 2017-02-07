@@ -39,9 +39,15 @@ curl "api_endpoint_here"
 
 # API's
 
-## Room List Request (Send)
+## Retrieve Rooms API
 
-The room request list will blah blah blah.
+SWITCH.CM uses the Retrieve Rooms message to retrieve a list of active rooms for a property.
+
+## What is the Retrieved Rooms API use for? ##
+
+The Retrieve Rooms API allows users of the SWITCH.CM channel manager to see what rooms & rate plans are available to map to your booking channel.  Without the Retrieve Rooms API, SWITCH.CM doesn't have any knowledge of the rooms & rate plans you wish to receive availability & rates for.  Below is a screenshot of where the information you provide on the Retrieve Rooms API is utilized.
+
+Please ONLY return a list of 'Active' Room Code & Rate Code combinations in your Retrieved Rooms API.
 
 ### HTTP request ###
 
