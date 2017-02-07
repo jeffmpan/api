@@ -15,7 +15,7 @@ search: true
 
 # Introduction
 
-SWITCH.CM builds distribution platforms for airlines & hotels.  Our API will allow you to seamlessly synchronize the following data with thousands of booking websites:
+SWITCH.CM builds distribution platforms for airlines & hotels.  Our API allows you to seamlessly synchronize the following data with thousands of booking websites:
 
 - pricing & availability data
 - guest reservation data
@@ -40,6 +40,8 @@ curl "api_endpoint_here"
 # API's
 
 ## Room List Request (Send)
+
+The room request list will blah blah blah.
 
 ### HTTP request ###
 
