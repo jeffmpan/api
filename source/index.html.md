@@ -43,14 +43,12 @@ curl "api_endpoint_here"
 
 ### HTTP request ###
 
-```shell
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
 		<h6>/api/room/create</h6>
 	</div>
 </div>
-```
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
