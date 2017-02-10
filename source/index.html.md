@@ -43,7 +43,7 @@ curl "api_endpoint_here"
 
 SWITCH.CM uses the Retrieve Rooms message to retrieve a list of active rooms for a property.
 
-## What is the Retrieved Rooms API use for? ##
+### What are the Retrieved Rooms API use for?
 
 The Retrieve Rooms API allows users of the SWITCH.CM channel manager to see what rooms & rate plans are available to map to your booking channel.  Without the Retrieve Rooms API, SWITCH.CM doesn't have any knowledge of the rooms & rate plans you wish to receive availability & rates for.  Below is a screenshot of where the information you provide on the Retrieve Rooms API is utilized.
 
@@ -147,7 +147,7 @@ property_id | The ID of the property | *
 
 ## Create Rooms API
 
-To create room
+The Create Rooms API will allow you to generate new rooms on your xxx.switch.cm calendar.
 
 ### HTTP Request
 
@@ -197,7 +197,9 @@ name | name of the room  | *
 
 ## Create Reservation API
 
-????
+SWITCH.CM uses the Create Reservation API to receive reservations.
+
+Sending a Create Reservation API call will generate a new reservation on the SWITCH.CM calendar.
 
 ### HTTP Request
 
@@ -286,7 +288,9 @@ name | name of the room  | *
 
 ## Modify Reservation API
 
-????
+SWITCH.CM uses the Modify Reservation API to modify existing reservations.
+
+Sending a Modify Reservation API call will edit an existing reservation on the SWITCH.CM calendar.
 
 ### HTTP Request
 
