@@ -195,6 +195,90 @@ rooms | Multiple rooms  | *
 name | name of the room  | *
 
 
+## Retrieve Reservation API
+
+Retrieve a list of reservations for a property.
+
+
+### HTTP Request
+
+`POST https://api.switch.dev/api/reservation`
+
+```shell
+curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
+  "property_id": "25"
+}' 'https://api.switch.dev/api/reservation'
+```
+
+> JSON RESPONSE:
+
+```json
+{
+  "reservations": [
+        {
+          "booking_id": "101657667746",
+          "booking_date": "2017-02-17",
+          "organiser_name": "John Doe",
+          "rooms": [
+            {
+              "id": "4567",
+              "booking_date": "2017-02-17",
+              "check_out": "2016-11-28",
+              "status": "waiting for guest",
+              "source": "5",
+              "booked_room": "5120",
+              "deleted_at": null,
+              "created_at": "2017-02-14 11:18:20",
+              "updated_at": "2017-02-14 11:18:20",
+              "total": "225000.00",
+              "deposit": "0.00",
+              "total_payment": null,
+              "cleaning_fee": "0.00",
+              "commission": "33750.00",
+              "service_fee": "0.00",
+              "gross_revenue": "225000.00",
+              "net_revenue": "191250.00",
+              "remaining_balance": "225000.00",
+              "auxiliaries": null,
+              "sales_tax": "0.00",
+              "tax_rate": "0.00",
+              "guest": {
+                "name": "John Doe",
+                "email": "476115+bulk@switch.cm",
+                "phone": "6478219711",
+                "address": "90 queens drive",
+                "city": "Toronto",
+                "zip": "M6l3e2"
+              },
+              "nights": [
+                {
+                  "date": "2017-02-17",
+                  "price": "149.00",
+                  "assigned_room": "57"
+                },
+                {
+                  "date": "2017-02-18",
+                  "price": "275.00",
+                  "assigned_room": "57"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+}
+```
+
+
+### Parameters
+
+Parameter | Description | Mandatory
+--------- | ----------- | ---------
+property_id | The ID of the property | *
+start | filter result with check-in date from (yyyy-mm-dd) |
+end | filter result check-in date to (yyyy-mm-dd) |
+
+
 ## Create Reservation API
 
 SWITCH.CM uses the Create Reservation API to receive reservations.
