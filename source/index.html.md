@@ -465,3 +465,28 @@ property_id | The ID of the property | *
 rooms | Multiple rooms  | *
 name | name of the room  | *
 
+
+## Delete Reservation API
+
+SWITCH.CM uses the Delete Reservation API to delete existing reservations.
+
+
+### HTTP Request
+
+`POST https://api.switch.cm/api/reservation/delete`
+
+```shell
+curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
+  "property_id": "25",
+  "booking_id": "9871"
+}' 'https://api.switch.cm/api/reservation/delete'
+```
+
+
+
+### Parameters
+
+Parameter | Description | Mandatory
+--------- | ----------- | ---------
+property_id | The ID of the property | *
+booking_id | Booking ID  | *
