@@ -278,6 +278,11 @@ property_id | The ID of the property | *
 start | filter result with check-in date from (yyyy-mm-dd) |
 end | filter result check-in date to (yyyy-mm-dd) |
 
+### Notes
+
+If you put only `start`, it will search reservations from the start until the last.
+If you put only `end`, it will search all reservations with a check-in date before that date.
+If you use both `start` and `end`, it will search inside those parameters.
 
 ## Create Reservation API
 
