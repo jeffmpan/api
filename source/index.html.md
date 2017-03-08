@@ -51,12 +51,12 @@ Please ONLY return a list of 'Active' Room Code & Rate Code combinations in your
 
 ### HTTP Request
 
-`POST https://api.switch.dev/api/room/fetch`
+`POST https://api.switch.cm/api/room/fetch`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25"
-}' 'https://api.switch.dev/api/room/fetch'
+}' 'https://api.switch.cm/api/room/fetch'
 ```
 
 > JSON RESPONSE:
@@ -151,7 +151,7 @@ The Create Rooms API will allow you to generate new rooms on your xxx.switch.cm 
 
 ### HTTP Request
 
-`POST https://api.switch.dev/api/room/create`
+`POST https://api.switch.cm/api/room/create`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -181,7 +181,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
       ]
     }
   ]
-}' 'https://api.switch.dev/api/room/create'
+}' 'https://api.switch.cm/api/room/create'
 ```
 
 
@@ -202,12 +202,12 @@ Retrieve a list of reservations for a property.
 
 ### HTTP Request
 
-`POST https://api.switch.dev/api/reservation`
+`POST https://api.switch.cm/api/reservation`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
   "property_id": "25"
-}' 'https://api.switch.dev/api/reservation'
+}' 'https://api.switch.cm/api/reservation'
 ```
 
 > JSON RESPONSE:
@@ -275,14 +275,14 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
 Parameter | Description | Mandatory
 --------- | ----------- | ---------
 property_id | The ID of the property | *
-start | filter result with check-in date from (yyyy-mm-dd) |
-end | filter result check-in date to (yyyy-mm-dd) |
+start | filter result with date from (yyyy-mm-dd) |
+end | filter result date to (yyyy-mm-dd) |
 
 ### Notes
 
 
 - If you put only `start`, it will search reservations from the start until the last.
-- If you put only `end`, it will search all reservations with a check-in date before that date.
+- If you put only `end`, it will search all reservations with a date before that date.
 - If you use both `start` and `end`, it will search inside those parameters.
 
 ## Create Reservation API
@@ -293,7 +293,7 @@ Sending a Create Reservation API call will generate a new reservation on the SWI
 
 ### HTTP Request
 
-`POST https://api.switch.dev/api/reservation/create`
+`POST https://api.switch.cm/api/reservation/create`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -361,7 +361,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
         ]
       }
     ]
-}' 'https://api.switch.dev/api/reservation/create'
+}' 'https://api.switch.cm/api/reservation/create'
 ```
 
 
@@ -384,7 +384,7 @@ Sending a Modify Reservation API call will edit an existing reservation on the S
 
 ### HTTP Request
 
-`POST https://api.switch.dev/api/reservation/modify`
+`POST https://api.switch.cm/api/reservation/modify`
 
 ```shell
 curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-Type: application/json' -d '{
@@ -452,7 +452,7 @@ curl -k  -L -X POST -H 'X-Switch-Token: 8c6zfkwf4a1160ankv6r48rve' -H 'Content-T
         ]
       }
     ]
-}' 'https://api.switch.dev/api/reservation/modify'
+}' 'https://api.switch.cm/api/reservation/modify'
 ```
 
 
