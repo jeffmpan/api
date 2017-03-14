@@ -280,10 +280,7 @@ end | filter result date to (yyyy-mm-dd) |
 
 ### Notes
 
-
-- If you put only `start`, it will search reservations from the start until the last.
-- If you put only `end`, it will search all reservations with a date before that date.
-- If you use both `start` and `end`, it will search inside those parameters.
+The search parameters will return all reservations with any days inside the date parameters.  For example, a search for April 3rd to April 5th will yield a reservation from April 1st to April 7th (even though the check-in & check-out dates fall outside of the search parameter dates).
 
 ## Create Reservation API
 
